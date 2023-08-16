@@ -26,17 +26,19 @@ let playerChoice = prompt("Rock, Paper, or Scissors?");
     playerSelection = 2;
   }
 
-function playRound() {
-  if (playerSelection == 0 && computerSelection == 2 || playerSelection > computerSelection) {
-    alert('The Computer entered '+computerChoice+' and you entered '+playerChoice+'. You Win!')
+  function playRound() {
+    if (playerSelection == 0 && computerSelection == 2 || playerSelection > computerSelection) {
+      alert('The Computer entered '+computerChoice+' and you entered '+playerChoice+'. You Win!')
+    }
+    else if (playerSelection == 2 && computerSelection == 0 || playerSelection < computerSelection) {
+      alert('The Computer entered '+computerChoice+' and you entered '+playerChoice+'. You Lose.')
+    }
+    else if (playerSelection == computerSelection) {
+      alert("You and the Computer both entered "+playerChoice+". It's a tie. Try again.");
+    } else if (playerChoice != 'rock' || 'paper' || 'scissors') {
+      alert("You didn't enter rock, paper, or scissors.")
+   }
   }
-  else if (playerSelection == 2 && computerSelection == 0 || playerSelection < computerSelection) {
-    alert('The Computer entered '+computerChoice+' and you entered '+playerChoice+'. You Lose.')
-  }
-  else if (playerSelection == computerSelection) {
-    alert("You and the Computer both entered "+playerChoice+". It's a tie. Try again.");
-  } else alert("You didn't enter rock, paper, or scissors.")
- }
 
 console.log(computerSelection)
 console.log(playerSelection)
