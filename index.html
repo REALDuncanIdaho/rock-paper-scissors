@@ -2,10 +2,35 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
-        <script src="rock-paper-scissors.js"></script>
+        <title>rock paper scissors</title>
+        <script src="rock-paper-scissors.js" defer></script>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            input {
+              font-size: 2em;
+              margin: 10px 1px 0;
+            }
+            body {
+              background-color: black;
+            }
+          </style>
     </head>
     <body>
 
+      <h1>Rock, Paper, or Scissors?</h1>
+
+      
+
+      <div class = "row">
+        <img class = "button" src ="images/rock.jpg" alt="rock" onClick = 'chooseRock()' />
+        <img class = "button" src ="images/paper.jpg" alt="paper" onClick = 'choosePaper()' />
+        <img class = "button" src ="images/scissors.jpg" alt="scissors" onClick = 'chooseScissors()' />
+     </div>
+
+     <div class ="score">
+      <p id="ps">Player Score: 0</p>
+      <p id="cs">Computer Score: 0</p>
+    </div>
+  
     </body>
 </html>
